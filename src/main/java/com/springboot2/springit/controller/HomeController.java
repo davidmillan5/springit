@@ -2,13 +2,15 @@ package com.springboot2.springit.controller;
 
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
 
-    @RequestMapping({"/","/home"})
-    public String home(){
-        return "Hello, Spring Boot 2!";
+    @GetMapping("/")
+    public String home(Model model){
+        model.addAttribute("message","Hello World");
+        return "index";
     }
 }
