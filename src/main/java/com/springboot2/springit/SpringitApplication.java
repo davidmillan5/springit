@@ -7,6 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+
+
 @SpringBootApplication
 public class SpringitApplication {
 
@@ -19,5 +21,14 @@ public class SpringitApplication {
 	PrettyTime prettyTime(){
 		return new PrettyTime();
 	}
+
+
+	// TODO * Configuring this bean should not be needed once Spring Boot's Thymeleaf starter includes configuration
+// TODO   for thymeleaf-extras-springsecurity5 (instead of thymeleaf-extras-springsecurity4)
+//	@Bean
+//	public SpringSecurityDialect securityDialect() {
+//		return new SpringSecurityDialect();
+//	}
+
 
 }
